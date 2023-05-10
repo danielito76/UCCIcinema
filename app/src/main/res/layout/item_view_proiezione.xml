@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimaryContainer">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="93dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="5dp"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/immagine_film" />
+    <View
+        android:id="@+id/gradient"
+        android:layout_width="93dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_gradient_360g" />
+
+    <TextView
+        android:id="@+id/dataView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_toEndOf="@+id/imageview"
+        android:text="@string/data"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dataView"
+        android:layout_marginVertical="5dp"
+        android:layout_toEndOf="@+id/imageview"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/text_durata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorPrimary"
+        android:drawablePadding="2dp"
+        android:layout_toEndOf="@+id/imageview"
+        android:layout_below="@+id/text_name"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/baseline_access_time_24" />
+
+    <TextView
+        android:id="@+id/text_genere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorPrimary"
+        android:layout_marginVertical="5dp"
+        android:layout_toEndOf="@+id/imageview"
+        android:layout_below="@+id/text_durata"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text_orario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imageview"
+        android:background="?attr/colorSecondary"
+        android:layout_below="@+id/text_genere"
+        android:layout_centerVertical="true"
+        android:paddingVertical="4dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

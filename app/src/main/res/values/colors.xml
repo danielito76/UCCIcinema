@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="sfondo2">#ffdefcfc</color>
+    <color name="sfondo1">#AA5cfab5</color>
+    <color name="black_alpha_40">#66000000</color>
+
+<!--    MODIFICARE QUI PER CAMBIARE I COLORI DEL TEMA-->
+    <color name="button_background_color">#AA2D7A59</color>
+    <color name="overlay_color_secondary_variant">#CC191919</color>
+    <color name="overlay_light_primary">#44362F</color>
+    <color name="overlay_light_onPrimary">#FFFFFF</color>
+    <color name= "overlay_light_primaryContainer">#ecf5c0</color>
+    <color name="overlay_light_onPrimaryContainer">#400008</color>
+    <color name="overlay_color_ter_variant">#00000000</color>
+
+</resources>

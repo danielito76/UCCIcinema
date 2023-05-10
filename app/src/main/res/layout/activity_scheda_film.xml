@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
+    tools:context=".schede.SchedaFilm">
+<ScrollView
+    android:id="@+id/scrollView2"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorOnPrimary">
+
+        <ImageView
+            android:id="@+id/img_sfondo"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/sfondo_film_grande"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+    <View
+        android:id="@+id/gradient"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/shape_gradient_90g"
+        android:layout_alignParentStart="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/copertina_imageView"
+                android:layout_width="101dp"
+                android:layout_height="133dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/immagine_film" />
+
+            <Button
+                android:id="@+id/iconButton"
+                style="?attr/materialIconButtonFilledStyle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="170dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/heart"
+                android:contentDescription="@string/favourite"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/anno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/copertina_imageView"
+                android:layout_marginTop="175dp"
+                android:textColor="?attr/colorPrimary"
+                android:text="@string/anno"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/durata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/anno"
+                android:layout_marginStart="50dp"
+                android:drawablePadding="2dp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary"
+                android:text="@string/durata"
+                android:layout_marginTop="175dp"
+                android:textAlignment="textStart"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/baseline_access_time_24"
+                tools:ignore="RelativeOverlap" />
+
+
+            <TextView
+                android:id="@+id/nome_film"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="195dp"
+                android:layout_toEndOf="@+id/copertina_imageView"
+                android:text="@string/nome_del_film"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/copertina_imageView" />
+
+            <Button
+                android:id="@+id/button_film_to_cinema"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/nome_film"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/copertina_imageView"
+                android:text="@string/cinema"
+                app:icon="@drawable/baseline_search_24"
+                app:iconGravity="start"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/story"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/copertina_imageView"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="?attr/colorPrimary"
+                android:maxLines="3"
+                android:padding="2dp"
+                android:text="@string/story"
+                android:textAlignment="textStart"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btShowmore"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/story"
+                android:layout_centerHorizontal="true"
+                android:text="ALTRO"
+                android:textColor="?attr/colorPrimary"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btShowmore">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:id="@+id/director"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="REGIA"
+                        android:textAlignment="textStart"
+                        android:textColor="?attr/colorSecondary"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/director_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="50dp"
+                        android:singleLine="true"
+                        android:text="@string/regia"
+                        android:textAlignment="textStart"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:id="@+id/cast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="@string/cast"
+                        android:textAlignment="textStart"
+                        android:textColor="?attr/colorSecondary"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/cast_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="50dp"
+                        android:singleLine="true"
+                        android:text="@string/cast_film"
+                        android:textAlignment="textStart"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:id="@+id/genre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="GENERE"
+                        android:textAlignment="textStart"
+                        android:textColor="?attr/colorSecondary"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/genre_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="50dp"
+                        android:singleLine="true"
+                        android:text="@string/genre_film"
+                        android:textAlignment="textStart"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btnWriteReview"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table"
+                android:layout_centerHorizontal="true"
+                android:text="SCRIVI UNA RECENSIONE"
+                android:textColor="?attr/colorPrimary" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/btnWriteReview"
+                android:animateLayoutChanges="false"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="502dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
